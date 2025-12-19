@@ -1,6 +1,6 @@
 package com.D.DID.IT.rpgzin.Infrastructure.repositories;
 
-import com.D.DID.IT.rpgzin.Infrastructure.entitys.PersonagemDomain;
+import com.D.DID.IT.rpgzin.Infrastructure.entities.PersonagemDomain;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -14,5 +14,5 @@ public interface CadastroRepository extends JpaRepository<PersonagemDomain, UUID
     Optional<PersonagemDomain> findByVulgo(String vulgo);
 
     @Transactional
-    void deletePorVulgo(String vulgo);
+    void deleteByVulgo(String vulgo);
 }
